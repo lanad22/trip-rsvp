@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brett & Lana — Vietnam Trips</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Questrial&family=Pinyon+Script&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">B&L</a>
+    <div class="nav-links">
+      <a href="#map">Map</a>
+      <a href="#trips">Trips</a>
+      <a href="#rsvp" class="nav-rsvp-btn">RSVP</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Keep Exploring</h1>
+    <span class="script-line">Brett & Lana — After the Wedding</span>
+    <div class="hero-photo-frame">
+      <!-- Replace src with your landscape photo -->
+      <img src="images/photo1.jpg" alt="Brett & Lana">
+    </div>
+    <div class="hero-info">
+      <p>October 26–30, 2026</p>
+      <p>Sa Pa &middot; Phu Quoc &middot; Vietnam</p>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map-section" id="map">
+    <div class="section-inner wide">
+      <div class="reveal">
+        <span class="section-label">The Full</span>
+        <span class="section-script">Journey</span>
+        <p class="prose">After the wedding, we are planning a friends and cousins trip to do some exploring around Vietnam for those who are intereseted 😊. Here's the whole trip at a glance, from landing in Hanoi through the wedding, Ha Long Bay, and
+          the optional adventures after.</p>
+      </div>
+      <div class="map-container reveal reveal-delay-1">
+        <svg class="vietnam-map" viewBox="140 45 280 370" xmlns="http://www.w3.org/2000/svg" style="max-width:420px;">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="2" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.12" />
+            </filter>
+          </defs>
+          <polygon fill="#f5c6c0" fill-opacity="0.35" stroke="#c0392b" stroke-width="0.8" stroke-opacity="0.4"
+            stroke-linejoin="round"
+            points="276.1,259.9 275.4,257.5 274.7,253.8 275.6,251.7 277.3,250.4 278.5,247.7 278.6,245.5 275.8,242.8 274.5,240.9 273.1,240.6 269.7,237.1 268.3,232.2 271.5,230.8 274.0,227.8 271.6,227.1 267.8,224.5 265.9,221.5 263.3,220.4 261.4,218.5 261.4,216.3 259.0,218.0 257.6,218.2 255.8,214.1 253.9,204.6 251.4,204.2 249.1,200.0 248.7,197.8 247.5,198.2 239.1,189.8 235.3,185.5 233.0,179.8 231.5,177.2 231.0,175.8 228.9,176.2 227.1,175.3 226.1,174.0 224.3,171.4 223.2,165.9 224.3,164.5 220.6,162.2 216.8,161.2 213.8,159.9 210.2,156.7 206.9,154.5 204.4,153.0 199.6,149.9 197.0,148.4 198.0,146.3 200.3,145.2 201.3,143.6 199.3,139.8 201.9,139.6 205.3,139.0 208.5,140.0 212.0,140.7 214.5,137.8 216.9,135.1 217.8,132.5 219.8,131.6 220.1,129.7 217.0,126.1 213.6,124.6 214.1,123.2 207.2,120.7 211.1,118.4 209.5,113.2 207.3,111.8 205.4,109.6 203.7,108.8 200.8,108.1 196.1,110.6 194.3,112.4 193.2,114.1 192.4,115.3 189.0,113.1 187.2,111.4 185.0,111.8 182.1,110.8 179.7,108.5 177.0,104.8 175.8,102.5 174.7,100.7 175.8,97.9 176.2,94.8 177.7,92.1 175.6,89.7 173.9,88.9 170.9,90.6 168.3,84.0 167.3,81.7 163.5,77.6 160.8,74.6 160.2,72.4 162.7,70.9 165.1,66.5 166.6,64.5 169.0,65.7 170.6,65.8 175.5,68.4 178.9,72.2 180.7,70.5 183.6,66.8 186.6,64.2 188.2,67.8 190.3,66.1 192.8,63.6 197.1,68.9 198.9,70.4 200.0,68.0 201.8,63.7 205.0,65.0 209.9,64.4 212.1,63.2 214.0,63.4 217.5,60.4 218.4,54.9 222.2,53.4 224.7,52.5 226.0,51.6 228.2,51.2 230.2,52.3 232.5,55.6 235.8,57.8 237.4,59.0 239.7,60.6 242.3,59.4 247.7,62.4 252.9,60.7 255.9,62.4 257.8,63.7 258.0,65.4 255.7,69.0 253.6,72.1 254.6,75.1 256.0,78.7 256.6,80.7 256.3,83.9 258.5,83.3 261.9,85.0 263.9,86.0 267.3,89.8 271.8,92.1 274.3,93.0 277.9,92.1 281.5,91.8 284.3,95.5 283.4,95.1 282.5,94.3 281.3,95.0 281.1,95.1 279.7,94.8 280.4,95.9 279.0,97.1 277.8,97.3 277.3,98.0 276.9,98.9 276.5,99.8 275.1,98.7 274.9,99.9 272.5,99.1 271.5,100.7 271.6,102.7 271.5,105.1 271.2,106.9 268.2,107.3 267.9,108.7 265.1,108.2 265.9,106.5 265.6,106.5 264.8,106.3 264.3,106.3 264.3,107.2 263.3,108.4 260.9,107.5 262.2,108.8 261.2,108.7 260.6,109.4 258.9,108.2 259.4,107.1 259.1,106.9 256.9,106.7 256.4,107.1 258.0,108.6 257.7,109.5 257.7,111.9 259.2,114.6 257.9,114.6 257.4,115.4 254.9,115.4 255.8,116.8 254.2,118.5 254.1,120.1 254.4,120.4 254.5,122.3 255.0,124.1 253.1,124.0 254.3,124.7 252.5,126.2 250.5,126.3 248.5,129.2 246.6,130.7 244.8,131.2 243.2,131.8 241.3,133.9 240.6,136.2 240.7,137.1 238.8,139.8 237.9,141.5 238.5,141.8 237.7,146.2 238.2,148.4 237.5,150.0 236.0,153.6 234.2,156.5 236.3,159.4 235.8,160.0 237.1,162.6 237.7,161.9 241.3,168.6 244.5,173.0 246.3,173.7 250.1,177.2 249.5,177.6 250.2,177.6 251.8,177.3 252.9,182.1 252.2,183.5 253.1,187.2 248.8,185.4 251.6,186.7 251.5,187.0 256.1,192.5 263.1,199.3 268.7,206.2 267.9,207.4 269.2,206.6 278.2,214.2 276.7,214.3 278.0,214.9 278.8,215.0 278.8,216.4 279.9,216.3 282.6,219.3 282.1,220.8 283.9,221.5 286.5,220.6 288.3,222.6 288.6,222.7 289.4,224.7 291.5,227.0 291.8,227.7 291.2,225.0 292.0,224.4 293.6,224.5 293.0,225.7 293.0,229.4 294.8,231.5 300.0,239.6 300.1,241.0 302.1,241.8 303.5,243.6 303.8,244.0 304.4,242.5 304.7,242.0 306.0,245.5 306.8,247.0 306.5,247.6 306.0,248.9 306.8,251.0 309.7,257.8 310.6,261.9 310.3,263.3 311.9,267.7 314.2,273.3 313.7,273.7 315.8,282.4 314.3,279.7 314.6,282.2 314.5,285.2 315.9,287.0 315.5,287.7 314.1,285.8 315.0,287.6 316.1,288.3 316.5,289.8 315.4,290.2 314.5,289.3 314.4,291.3 316.0,292.7 315.7,293.5 315.8,295.1 316.2,293.6 316.2,296.4 316.9,298.9 319.8,303.7 319.2,304.1 318.5,304.5 317.8,305.5 319.9,309.2 319.1,311.0 318.9,309.2 317.9,309.3 317.6,308.2 317.4,305.7 315.1,308.1 314.1,311.5 314.5,311.3 314.8,311.6 316.2,314.6 316.8,315.7 313.7,313.9 313.0,314.7 314.5,317.2 314.2,318.7 314.5,319.9 314.3,320.5 314.4,322.2 316.1,326.4 316.0,328.3 314.7,325.5 313.7,323.0 313.8,326.9 314.2,328.2 315.2,331.4 314.0,333.8 312.5,335.2 310.3,334.3 310.1,336.2 309.2,341.7 305.2,342.1 303.3,345.1 300.4,345.2 297.6,348.3 295.3,350.6 290.0,351.5 287.6,356.8 282.7,357.9 278.0,360.2 272.9,363.0 269.6,363.9 269.6,362.9 267.9,362.3 266.3,362.1 265.0,362.3 265.8,359.2 265.4,357.7 265.5,359.2 265.6,361.0 265.1,358.8 264.5,362.5 264.0,361.3 261.7,358.6 259.9,357.4 259.7,358.7 259.3,360.9 257.5,361.8 256.0,363.3 256.5,363.4 258.2,363.5 260.2,364.1 254.5,366.7 259.0,369.2 260.5,370.0 258.6,372.6 257.8,373.0 257.5,374.1 255.3,373.8 249.3,367.8 253.6,373.6 257.7,377.7 257.0,378.1 245.7,368.3 246.2,369.3 249.2,373.0 253.9,378.0 255.6,382.4 252.9,384.8 241.1,375.1 244.4,380.5 246.5,388.0 243.0,390.5 229.6,397.8 227.1,402.6 220.7,407.3 213.6,407.6 216.1,406.2 218.2,405.5 216.4,404.7 218.0,403.6 215.3,400.7 216.2,385.6 219.8,376.6 222.4,375.1 217.8,371.6 212.8,369.1 211.3,370.4 210.8,368.8 209.6,367.1 209.3,364.5 208.1,364.8 209.6,362.1 214.9,361.5 221.6,356.7 221.0,351.6 225.8,352.6 229.4,350.8 235.2,349.9 238.7,352.1 241.0,352.7 245.5,354.9 245.3,350.9 246.2,348.5 243.2,346.9 240.0,343.4 239.7,339.1 237.9,335.7 240.4,334.3 242.9,331.2 248.7,333.5 252.1,333.8 251.9,330.4 251.4,326.5 253.2,326.8 259.0,324.9 264.4,323.2 270.0,318.0 275.5,317.9 277.1,313.2 276.8,306.8 275.2,302.4 275.1,300.8 275.7,283.9 274.6,280.9 274.2,277.9 272.3,276.1 272.7,270.4 273.1,267.2 274.4,266.8 275.8,263.9 276.1,259.9" />
+          <line x1="223" y1="105" x2="197" y2="67" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="3,3"
+            opacity="0.5" />
+          <line x1="223" y1="105" x2="263" y2="93" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="3,3"
+            opacity="0.5" />
+          <line x1="223" y1="105" x2="242" y2="117" stroke="#c0392b" stroke-width="0.7" stroke-dasharray="3,3"
+            opacity="0.5" />
+          <line x1="223" y1="105" x2="218" y2="378" stroke="#c0392b" stroke-width="0.5" stroke-dasharray="4,4"
+            opacity="0.25" />
+          <circle cx="223" cy="105" r="4" fill="#c0392b" opacity="0.85" />
+          <circle cx="223" cy="105" r="1.8" fill="#fff" />
+          <rect x="152" y="96" width="64" height="22" rx="3" fill="#fff" filter="url(#shadow)" />
+          <text x="184" y="107" text-anchor="middle" font-family="Playfair Display,serif" font-size="9"
+            font-weight="600" fill="#c0392b">Hanoi (HAN)</text>
+          <text x="184" y="115" text-anchor="middle" font-family="Questrial,sans-serif" font-size="6" fill="#6b6b6b">①
+            Fly in · Oct 24</text>
+          <circle cx="242" cy="117" r="5" fill="#c0392b" filter="url(#glow)" opacity="0.9" />
+          <circle cx="242" cy="117" r="2.5" fill="#fff" />
+          <rect x="252" y="107" width="72" height="22" rx="3" fill="#fff" filter="url(#shadow)" />
+          <text x="288" y="118" text-anchor="middle" font-family="Playfair Display,serif" font-size="10"
+            font-weight="700" fill="#c0392b">Hai Duong</text>
+          <text x="288" y="126" text-anchor="middle" font-family="Questrial,sans-serif" font-size="6" fill="#6b6b6b">②
+            Wedding · Oct 25</text>
+          <circle cx="263" cy="93" r="4.5" fill="#e74c3c" filter="url(#glow)" opacity="0.9" />
+          <circle cx="263" cy="93" r="2" fill="#fff" />
+          <rect x="272" y="82" width="74" height="22" rx="3" fill="#fff" filter="url(#shadow)" />
+          <text x="309" y="93" text-anchor="middle" font-family="Playfair Display,serif" font-size="10"
+            font-weight="500" fill="#1a1a1a">Ha Long Bay</text>
+          <text x="309" y="101" text-anchor="middle" font-family="Questrial,sans-serif" font-size="6" fill="#6b6b6b">③
+            Boat tour · Oct 25</text>
+          <circle cx="197" cy="67" r="4.5" fill="#e74c3c" filter="url(#glow)" opacity="0.9" />
+          <circle cx="197" cy="67" r="2" fill="#fff" />
+          <rect x="143" y="55" width="46" height="22" rx="3" fill="#fff" filter="url(#shadow)" />
+          <text x="166" y="66" text-anchor="middle" font-family="Playfair Display,serif" font-size="10"
+            font-weight="500" fill="#1a1a1a">Sa Pa</text>
+          <text x="166" y="74" text-anchor="middle" font-family="Questrial,sans-serif" font-size="6" fill="#6b6b6b">④
+            Mountains</text>
+          <circle cx="218" cy="378" r="4.5" fill="#e74c3c" filter="url(#glow)" opacity="0.9" />
+          <circle cx="218" cy="378" r="2" fill="#fff" />
+          <rect x="228" y="368" width="62" height="22" rx="3" fill="#fff" filter="url(#shadow)" />
+          <text x="259" y="379" text-anchor="middle" font-family="Playfair Display,serif" font-size="10"
+            font-weight="500" fill="#1a1a1a">Phu Quoc</text>
+          <text x="259" y="387" text-anchor="middle" font-family="Questrial,sans-serif" font-size="6" fill="#6b6b6b">⑤
+            Beach resort</text>
+          <rect x="340" y="380" width="72" height="28" rx="3" fill="rgba(255,255,255,0.85)" />
+          <circle cx="349" cy="389" r="3" fill="#c0392b" /><text x="355" y="391" font-family="Questrial,sans-serif"
+            font-size="6" fill="#6b6b6b">Wedding</text>
+          <circle cx="349" cy="399" r="3" fill="#e74c3c" /><text x="355" y="401" font-family="Questrial,sans-serif"
+            font-size="6" fill="#6b6b6b">Trip stops</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIP CARDS (flip) -->
+  <section class="trips-section" id="trips">
+    <div class="section-inner wide">
+      <div class="reveal">
+        <span class="section-label">Choose Your</span>
+        <span class="section-script">Adventure</span>
+        <p class="prose" style="margin-bottom:1rem;">After the wedding and Ha Long Bay, we head straight to Sa Pa. From
+          there you can fly home or continue south to Phu Quoc. Estimated costs per person are below.</p>
+      </div>
+
+      <div class="trip-cards">
+        <div class="flip-container reveal reveal-delay-1" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card">
+            <div class="flip-front flip-front-sapa">
+              <h3>Sa Pa</h3>
+              <p class="flip-sub">Northern Highlands · ~2 Days</p>
+              <p class="flip-hint">Tap to flip</p>
+            </div>
+            <div class="flip-back">
+              <img class="flip-back-img" src="images/sapa.png">
+              <div class="flip-back-body">
+                <span class="tag">~2 Days · Oct 26–27</span>
+                <h3>Sa Pa</h3>
+                <p class="meta">Northern Highlands</p>
+                <p>Head north to the highlands: rice terraces, mountain paths, and cooler weather.</p>
+                <p class="cost">~$300 per person</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-container reveal reveal-delay-2" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card">
+            <div class="flip-front flip-front-phuquoc">
+              <h3>Phu Quoc</h3>
+              <p class="flip-sub">Southern Vietnam · ~3 Days</p>
+              <p class="flip-hint">Tap to flip</p>
+            </div>
+            <div class="flip-back">
+              <img class="flip-back-img" src="images/phuquoc.jpg">
+              <div class="flip-back-body">
+                <span class="tag">~3 Days · Oct 28–30</span>
+                <h3>Phu Quoc</h3>
+                <p class="meta">Southern Vietnam</p>
+                <p>After Sa Pa, fly south to a beach resort on Phu Quoc Island.</p>
+                <p class="cost">~$500 per person</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTE -->
+  <section class="invite-note-section">
+    <div class="envelope-wrapper reveal">
+      <div class="top-flap"></div>
+      <div class="card">
+        <h3>We'd love if you can join</h3>
+        <p>We'll share more details on itineraries and logistics as it gets closer. For now, we just need a
+          <strong>headcount</strong> so we can start confirming bookings.
+        </p>
+        <p>Fill out the RSVP below.</p>
+      </div>
+      <div class="flap left-flap"></div>
+      <div class="flap right-flap"></div>
+      <div class="flap bottom-flap"></div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section" id="rsvp">
+    <div style="max-width:600px;margin:0 auto;">
+      <div class="rsvp-card reveal">
+        <div id="rsvpForm">
+          <span class="section-script">RSVP</span>
+          <p class="prose">Let us know which trip works for you by <strong>April 30, 2026</strong>.</p>
+
+          <div class="rsvp-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" id="firstName" placeholder="First name" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName" placeholder="Last name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label>Number of People (including you)</label>
+              <select id="guests">
+                <option value="1">Just me</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Which trip works for you?</label>
+              <div class="trip-select-cards">
+                <div class="trip-select-card selected" data-value="sapa_only" onclick="selectTrip(this)">
+                  <div class="trip-select-check">✓</div>
+                  <div class="trip-select-content">
+                    <h4>Sa Pa Only</h4>
+                    <p>Head to the northern highlands after Ha Long Bay, then fly home from Hanoi.</p>
+                    <span class="trip-select-tag">~5 days total · ~$300</span>
+                  </div>
+                </div>
+                <div class="trip-select-card" data-value="sapa_phuquoc" onclick="selectTrip(this)">
+                  <div class="trip-select-check">✓</div>
+                  <div class="trip-select-content">
+                    <h4>Sa Pa + Phu Quoc</h4>
+                    <p>Mountains first, then fly south to the beach. Plan for about a week off.</p>
+                    <span class="trip-select-tag">~8 days total · ~$800</span>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" id="tripOptionValue" value="sapa_only">
+            </div>
+
+            <div class="phuquoc-fields" id="phuquocFields">
+              <p class="phuquoc-note">We need passport details to book domestic flights. You can also send these
+                separately.</p>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name (as on passport)</label>
+                  <input type="text" id="passportName" placeholder="Full legal name">
+                </div>
+                <div class="form-group">
+                  <label>Date of Birth</label>
+                  <input type="date" id="dob">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Questions or Notes</label>
+              <textarea id="notes" placeholder="Dietary needs, questions, anything else"></textarea>
+            </div>
+
+            <button class="submit-btn" onclick="submitRSVP()">Send Trip RSVP</button>
+            <p class="deadline-note">Please respond by April 30, 2026</p>
+          </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+          <h3>Got it — thank you!</h3>
+          <p>We'll be in touch with more details once we have a headcount. Can't wait to explore Vietnam together!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>Brett <span class="heart">♥</span> Lana — October 25, 2026 — Vietnam</p>
+  </div>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Trip selection
+    function selectTrip(card) {
+      document.querySelectorAll('.trip-select-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      const val = card.dataset.value;
+      document.getElementById('tripOptionValue').value = val;
+      const pq = document.getElementById('phuquocFields');
+      if (val === 'sapa_phuquoc') { pq.classList.add('visible'); } else { pq.classList.remove('visible'); }
+    }
+
+    // Submit
+    function submitRSVP() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      if (!firstName || !lastName || !email) { alert('Please fill in all required fields.'); return; }
+
+      const data = {
+        name: firstName + ' ' + lastName,
+        email,
+        guests: document.getElementById('guests').value,
+        tripOption: document.getElementById('tripOptionValue').value,
+        passportName: document.getElementById('passportName')?.value || '',
+        dob: document.getElementById('dob')?.value || '',
+        notes: document.getElementById('notes').value,
+        submittedAt: new Date().toISOString(),
+      };
+
+      console.log('Trip RSVP Data:', JSON.stringify(data, null, 2));
+      // fetch('YOUR_APPS_SCRIPT_URL', { method:'POST', body:JSON.stringify(data) })
+
+      document.getElementById('rsvpForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
