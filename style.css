@@ -226,83 +226,117 @@ section { padding: 6rem 1.5rem; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12rem 1.5rem 6rem;
+  padding: 8rem 1.5rem 6rem;
 }
 
 .envelope-wrapper {
+  --env-w: min(480px, 90vw);
+  --env-h: calc(var(--env-w) * 280 / 480);
+  --flap-h: calc(var(--env-w) * 140 / 480);
+  --bottom-flap-h: calc(var(--env-w) * 160 / 480);
+  
   position: relative;
-  width: 480px; height: 280px;
+  width: var(--env-w);
+  height: var(--env-h);
   background-color: #b32418;
-  margin-top: 120px;
+  margin-top: calc(var(--flap-h) + 60px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+
 .top-flap {
   position: absolute;
-  top: -140px; left: 0;
-  border-left: 240px solid transparent;
-  border-right: 240px solid transparent;
-  border-bottom: 140px solid #a12015;
+  top: calc(-1 * var(--flap-h));
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: calc(var(--env-w) / 2) solid transparent;
+  border-right: calc(var(--env-w) / 2) solid transparent;
+  border-bottom: var(--flap-h) solid #a12015;
   z-index: 0;
-  width: 0; height: 0;
 }
+
 .card {
   position: absolute;
-  bottom: 120px; left: 20px; right: 20px;
-  height: 380px;
+  bottom: 80px; /* Tucks the card into the envelope pocket */
+  min-height: 370px; /* Forces the card upwards so the text stays visible */
+  left: 4%;
+  right: 4%;
   background-color: #fffaf0;
-  padding: 40px 50px;
+  padding: clamp(20px, 5%, 40px) clamp(20px, 6%, 50px);
   text-align: center;
   z-index: 1;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
 }
+
 .card h3 {
   font-family: 'Playfair Display', serif;
   color: #1a5b92;
-  font-size: 2.2rem; font-weight: 500;
-  margin-bottom: 20px;
+  font-size: clamp(1.3rem, 4.5vw, 2.2rem);
+  font-weight: 500;
+  margin-bottom: 16px;
   letter-spacing: 0.5px;
+  line-height: 1.2;
 }
+
 .card p {
   color: #1a5b92;
-  font-size: 0.85rem; line-height: 1.6;
-  margin-bottom: 25px;
+  font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
-.card strong { color: #0f3d63; }
-.flap { position: absolute; width: 0; height: 0; }
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card strong {
+  color: #0f3d63;
+}
+
+.flap {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
 .left-flap {
-  top: 0; left: 0;
-  border-top: 140px solid transparent;
-  border-bottom: 140px solid transparent;
-  border-left: 240px solid #cc2b1c;
+  top: 0;
+  left: 0;
+  border-top: var(--flap-h) solid transparent;
+  border-bottom: var(--flap-h) solid transparent;
+  border-left: calc(var(--env-w) / 2) solid #cc2b1c;
   z-index: 2;
 }
+
 .right-flap {
-  top: 0; right: 0;
-  border-top: 140px solid transparent;
-  border-bottom: 140px solid transparent;
-  border-right: 240px solid #cc2b1c;
+  top: 0;
+  right: 0;
+  border-top: var(--flap-h) solid transparent;
+  border-bottom: var(--flap-h) solid transparent;
+  border-right: calc(var(--env-w) / 2) solid #cc2b1c;
   z-index: 2;
 }
+
 .bottom-flap {
-  bottom: 0; left: 0;
-  border-left: 240px solid transparent;
-  border-right: 240px solid transparent;
-  border-bottom: 160px solid #de3425;
+  bottom: 0;
+  left: 0;
+  border-left: calc(var(--env-w) / 2) solid transparent;
+  border-right: calc(var(--env-w) / 2) solid transparent;
+  border-bottom: var(--bottom-flap-h) solid #de3425;
   z-index: 3;
 }
 
 @media (max-width: 520px) {
-  .envelope-wrapper { width: 90%; height: 240px; }
-  .top-flap {
-    top: -120px;
-    border-left-width: 50vw; border-right-width: 50vw;
-    border-bottom-width: 120px;
+  .envelope-wrapper { 
+    /* Force 90vw width, let the CSS math dynamically recalculate all heights and flaps! */
+    --env-w: 90vw; 
   }
-  .card { padding: 30px 25px; height: 280px; bottom: 300px; }
-  .left-flap { border-top-width: 120px; border-bottom-width: 120px; border-left-width: 50vw; }
-  .right-flap { border-top-width: 120px; border-bottom-width: 120px; border-right-width: 50vw; }
-  .bottom-flap { border-left-width: 50vw; border-right-width: 50vw; border-bottom-width: 140px; }
-}
+  
+  .card { 
+    padding: 30px 20px; 
+    min-height: 400px; 
+    bottom: 4px; 
+  }
 
 /* ─── RSVP ─── */
 .rsvp-section {
